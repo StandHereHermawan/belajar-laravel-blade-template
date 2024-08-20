@@ -24,3 +24,7 @@ Route::get('/hello', function () {
 Route::get('/world', function () {
     return view('hello.world', ['name' => 'Laravel Blade World']);
 });
+
+Route::get('/html-encoding', function (\Illuminate\Http\Request $request) {
+    return view('html-encoding', ['name' => $request->input('name')]);
+});
